@@ -1,18 +1,24 @@
-v = 5
-array = [1, 2, 6, 10]
-
-def shiftarray(array, v):
+value1=10
+array1 = [15, 5, 22, 17, 45]
+value2=2
+array2=[22,61,85,88,99,65]
+value3=5
+array3=[]
+############################################################################
+def insertShiftArray(array, V):
   if not(type(array) == type([])):
     return 'error'
   newArr = []
   if len(array) % 2 == 0:
-    n = int(len(array)/2)
+    S = int(len(array)/2)
   else:
-    n = int(len(array)/2)+1
-  newArr = array[0]+[v]
-  newArr = newArr+array[len(array)]
+    S = int(len(array)/2)+1
+  newArr = array[0:S]+[V]
+  newArr = newArr+array[S:len(array)]
 
   return newArr
+##########################################################################
 
-
-print(shiftarray(array, v))
+print(insertShiftArray(array2, value2))
+print(insertShiftArray(array1, value1))
+print(insertShiftArray(array3, value3))
